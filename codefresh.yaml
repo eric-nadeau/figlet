@@ -1,0 +1,18 @@
+version: "1.0"
+
+steps:
+  clone:
+    type: "git-clone"
+    repo: "eric-nadeau/figlet"
+    git: "github_production"
+
+  build:
+    type: "build"
+    image_name: "eric-nadeau/figlet"
+    tag: "latest"
+    working_directory: "${{clone}}"
+
+  test:
+    image: "gcr.io/rich-access-174020/eric-nadeau/figlet"
+    commands:
+      - "figlet -W It works!"
