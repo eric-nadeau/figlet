@@ -3,8 +3,9 @@ version: "1.0"
 steps:
   clone:
     type: "git-clone"
-    repo: "eric-nadeau/figlet"
     git: "github_production"
+    repo: "eric-nadeau/figlet"
+    revision: "main"
 
   build:
     type: "build"
